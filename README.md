@@ -2,116 +2,339 @@
 
 ## Nexora B2B Sales Operations
 
-A practical end-to-end Pipedrive CRM implementation designed for **Nexora**, a fictional B2B technology and automation company managing enterprise sales opportunities across a structured pre-sales lifecycle.
+> **End-to-end Pipedrive CRM implementation covering B2B pipeline design, prospect management, sales qualification, activity management, workflow automation, forecasting, reporting, revenue goals, and product management.**
 
-This project demonstrates how Pipedrive can be configured to support lead qualification, opportunity management, sales activities, workflow automation, pipeline visibility, performance reporting, revenue targets, and product management.
-
----
-
-## Project Overview
-
-Nexora needed a structured CRM environment that could move prospective customers from initial opportunity through qualification, discovery, product demonstration, proposal, negotiation, contract review, and eventual closure.
-
-The implementation was designed to reduce manual follow-up, improve visibility across the sales pipeline, standardize sales activities, and provide management with meaningful sales-performance insights.
+**Platform:** Pipedrive CRM  
+**Business:** Nexora — Fictional B2B Technology & Automation Company  
+**Project Type:** CRM Implementation | Sales Operations | Workflow Automation  
+**Created by:** Chika Blessing
 
 ---
 
-## Business Requirements
+# 📌 Project Snapshot
 
-The CRM solution needed to:
+Nexora needed more than a database of contacts.
 
-- Create a structured B2B sales pipeline.
-- Standardize opportunity qualification.
-- Track prospects and sales opportunities.
-- Capture important deal information.
-- Schedule and manage sales activities.
-- Automate follow-up activities at key pipeline stages.
-- Reduce the risk of opportunities becoming inactive.
-- Monitor pipeline progression and sales performance.
-- Provide management-level reporting.
-- Establish measurable sales targets.
-- Maintain a catalogue of Nexora's services.
+The objective of this project was to design a structured B2B sales environment where the team could manage prospects, qualify opportunities, maintain clear next actions, automate repetitive follow-up, monitor pipeline movement, and give management visibility into sales performance.
+
+### The solution connects:
+
+**Pipeline → Organizations → Decision Makers → Deals → Qualification → Activities → Automations → Analytics → Goals → Products**
 
 ---
 
-## Solution Implemented
+# 01 | Sales Pipeline Architecture
 
-### Custom B2B Sales Pipeline
+The implementation began by designing a dedicated **Nexora B2B Sales Pipeline** around the company's pre-sales lifecycle.
 
-A dedicated **Nexora B2B Sales Pipeline** was configured with the following lifecycle:
+<p align="center">
+  <img src="screenshots/01-nexora-b2b-sales-pipeline.png" width="100%">
+</p>
 
-1. New Opportunity
-2. Qualified Lead
-3. Discovery Call
-4. Product Demo
-5. Proposal Sent
-6. Negotiation
-7. Contract Review
-8. Won
+<p align="center"><em>Custom Nexora B2B Sales Pipeline configured in Pipedrive.</em></p>
 
-The structure provides a clear visual representation of each opportunity's position in the sales process.
+### Pipeline Stages
 
-### Deal Qualification
+| Stage | Purpose |
+|---|---|
+| **New Opportunity** | Capture a newly identified sales opportunity |
+| **Qualified Lead** | Confirm sufficient fit and commercial potential |
+| **Discovery Call** | Understand requirements, pain points and stakeholders |
+| **Product Demo** | Demonstrate the relevant Nexora solution |
+| **Proposal Sent** | Present the proposed commercial solution |
+| **Negotiation** | Resolve commercial and solution requirements |
+| **Contract Review** | Complete final contractual review |
+| **Won** | Record successful closure |
 
-Deal records were configured to capture information relevant to B2B qualification and decision-making, including:
+The pipeline establishes a consistent path for moving opportunities from initial interest toward revenue.
 
-- Business Need
-- Product Interest
-- Decision Maker Identified
-- Decision Timeline
-- Competitor
-- Deal Value
-- Expected Close Date
-- Contact and organization information
+---
 
-### Sales Activity Management
+# 02 | Account & Contact Management
 
-Activities were incorporated into the sales process to create clear next actions for opportunities.
+With the sales process established, prospect organizations and their decision makers were added to the CRM.
 
-Examples include:
+<table>
+<tr>
+<td width="50%" valign="top">
 
-- Qualification calls
-- Discovery meetings
-- Product demonstrations
-- Proposal follow-ups
-- Negotiation follow-ups
-- Contract-stage actions
+<h3>🏢 Prospect Organizations</h3>
 
-### Workflow Automation
+<img src="screenshots/02-prospect-organizations.png" width="100%">
 
-Six workflow automations were implemented across the pre-sales lifecycle:
+<p><em>Target B2B organizations classified using Hot, Warm and Cold lead labels.</em></p>
 
-- New Opportunity Qualification
-- Qualified Lead → Discovery
-- Product Demo Follow-Up
-- Proposal Sent Follow-Up
-- Negotiation → Follow-Up Call
-- Contract Review → Final Action
+</td>
+<td width="50%" valign="top">
 
-These automations help ensure that important follow-up activities are created consistently as deals move through the pipeline.
+<h3>👤 Decision Makers</h3>
 
-### Reporting & Analytics
+<img src="screenshots/03-decision-maker-contacts.png" width="100%">
 
-A dedicated **Nexora Sales Performance Dashboard** was created to provide visibility into sales activity and pipeline performance.
+<p><em>Decision makers linked to their respective prospect organizations.</em></p>
 
-Reporting includes:
+</td>
+</tr>
+</table>
 
-- Deal Value by Stage
-- Deal Progress by Stage
-- Pipeline Health
-- Deals Status by Salesperson
-- Activities Status
-- Deals Won Revenue
+The sample account portfolio represents prospects across healthcare, HR, logistics, property, financial services, education, energy and technology.
 
-Different visualization formats were used to make the dashboard easier to interpret, including pipeline, bar, stacked-column, KPI and pie-chart views.
+Contact records centralize:
 
-### Sales Goal Management
+**Name · Lead Classification · Organization · Email · Phone**
 
-A quarterly revenue goal was configured for the Nexora B2B Sales Pipeline to demonstrate how Pipedrive can support sales target monitoring and performance management.
+This connects the **company being pursued** with the **person involved in the buying decision**.
+
+---
+
+# 03 | Opportunity Management
+
+Once the CRM foundation was established, realistic sample opportunities were created and distributed across the sales lifecycle.
+
+<p align="center">
+  <img src="screenshots/04-populated-sales-pipeline.png" width="100%">
+</p>
+
+<p align="center"><em>Populated Nexora B2B Sales Pipeline showing active opportunities at different stages.</em></p>
+
+### The working pipeline provides visibility into:
+
+- Current opportunities
+- Pipeline position
+- Deal value
+- Account relationships
+- Opportunity distribution
+- Next-action requirements
+
+This transforms the original pipeline architecture into a functioning sales workspace.
+
+---
+
+# 04 | Sales Qualification Framework
+
+A deal value alone does not tell a salesperson whether an opportunity is genuinely qualified.
+
+Custom deal fields were configured to capture the information required for better B2B sales decisions.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>⚙️ Qualification Fields</h3>
+
+<img src="screenshots/05-custom-deal-fields.png" width="100%">
+
+<p><em>Custom sales qualification and competitive-intelligence fields.</em></p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3>🎯 Qualification in Practice</h3>
+
+<img src="screenshots/06-deal-sales-qualification.png" width="100%">
+
+<p><em>Qualification information captured directly within an active opportunity.</em></p>
+
+</td>
+</tr>
+</table>
+
+### Qualification Logic
+
+| Business Question | CRM Field |
+|---|---|
+| What does the prospect need? | **Business Need** |
+| What solution are they interested in? | **Product Interest** |
+| Is the buying authority known? | **Decision Maker Identified** |
+| When is a decision expected? | **Decision Timeline** |
+| Who else may be competing? | **Competitor** |
+
+This creates a more disciplined qualification process before opportunities progress deeper into the pipeline.
+
+---
+
+# 05 | Sales Activity Management
+
+The CRM was configured to manage the actions required to keep opportunities moving.
+
+<p align="center">
+  <img src="screenshots/07-team-sales-activity-management.png" width="100%">
+</p>
+
+<p align="center"><em>Centralized team activity management across Nexora sales opportunities.</em></p>
+
+Activities include:
+
+**Qualification Calls · Discovery Meetings · Requirements Sessions · Product Demonstrations · Proposal Follow-Ups · Technical Reviews · Negotiation Follow-Ups · Contract Actions**
+
+> ### Every active opportunity should have a meaningful next action.
+
+Instead of relying on memory or disconnected reminders, the sales team can manage completed and upcoming work alongside the opportunity itself.
+
+---
+
+# 06 | Workflow Automation
+
+The next layer reduces repetitive CRM administration by automatically creating appropriate follow-up activities at important stages.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>⚡ New Opportunity Qualification</h3>
+
+<img src="screenshots/08-new-opportunity-qualification-automation.png" width="100%">
+
+<p><em>New opportunities trigger an initial qualification activity for the deal owner.</em></p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3>🔎 Qualified Lead → Discovery</h3>
+
+<img src="screenshots/09-qualified-lead-discovery-automation.png" width="100%">
+
+<p><em>Qualified opportunities automatically progress into a structured discovery action.</em></p>
+
+</td>
+</tr>
+</table>
+
+### Automation Pattern
+
+**Deal Event → Check Pipeline/Stage → Create Next Activity**
+
+The qualification workflow prompts the salesperson to confirm business need, product interest, decision-maker involvement and expected decision timeline.
+
+The discovery workflow then moves the conversation toward workflows, pain points, stakeholders, requirements and desired outcomes.
+
+---
+
+## Six Active Lifecycle Automations
+
+<p align="center">
+  <img src="screenshots/10-active-sales-automations-overview.png" width="100%">
+</p>
+
+<p align="center"><em>Automation suite supporting Nexora's pre-sales lifecycle.</em></p>
+
+| # | Automation | Purpose |
+|---|---|---|
+| 01 | **New Opportunity Qualification** | Establish immediate qualification |
+| 02 | **Qualified Lead → Discovery** | Connect qualification to discovery |
+| 03 | **Product Demo Follow-Up** | Maintain momentum after demonstrations |
+| 04 | **Proposal Sent Follow-Up** | Prevent proposals from sitting untouched |
+| 05 | **Negotiation → Follow-Up Call** | Maintain momentum during negotiation |
+| 06 | **Contract Review → Final Action** | Support the final pre-sale stage |
+
+### Automation Value
+
+✓ Reduces forgotten follow-ups  
+✓ Standardizes sales execution  
+✓ Maintains opportunity momentum  
+✓ Improves accountability  
+✓ Reduces repetitive administrative work
+
+---
+
+# 07 | Forecasting & Pipeline Analytics
+
+The implementation then moves from day-to-day CRM operation into sales intelligence.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>📈 Expected Close Forecast</h3>
+
+<img src="screenshots/11_Deal_Value_and_Expected_Close_Forecast.png" width="100%">
+
+<p><em>Forecast view showing when current Nexora opportunities are expected to close.</em></p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3>🔄 Pipeline Movement</h3>
+
+<img src="screenshots/12_Deal_Progress_and_Pipeline_Movement.png" width="100%">
+
+<p><em>Progress reporting showing movement through the B2B sales lifecycle.</em></p>
+
+</td>
+</tr>
+</table>
+
+The forecast provides visibility into expected closing periods while retaining the underlying deal information.
+
+The progression report adds another perspective by showing **how opportunities have moved through the pipeline**, rather than only where they currently sit.
+
+---
+
+# 08 | Executive Sales Dashboard
+
+Individual reports were consolidated into a dedicated **Nexora Sales Performance Dashboard**.
+
+<p align="center">
+  <img src="screenshots/13-nexora-sales-performance-dashboard.png" width="100%">
+</p>
+
+<p align="center"><em>Executive sales dashboard consolidating pipeline, activity and performance insights.</em></p>
+
+### Management View
+
+| Management Question | Dashboard Insight |
+|---|---|
+| When are opportunities expected to close? | Deal Value by Stage |
+| Are opportunities progressing? | Nexora Deal Progress by Stage |
+| Where is the pipeline narrowing? | Pipeline Health |
+| How are deals distributed across sales ownership? | Deals Status by Salesperson |
+| What is happening with sales activity? | Activities Status |
+| What revenue has closed? | Deals Won Revenue |
+
+The dashboard combines different visualization formats so management can understand the sales operation without opening individual deal records.
+
+---
+
+# 09 | Goals & Commercial Structure
+
+The final layer connects sales execution with **performance targets and standardized service offerings**.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>🎯 Q4 Revenue Goal</h3>
+
+<img src="screenshots/14-nexora-q4-sales-revenue-goal.png" width="100%">
+
+<p><em>Quarterly revenue target connected to deals won in the Nexora pipeline.</em></p>
+
+</td>
+<td width="50%" valign="top">
+
+<h3>📦 Service Catalogue</h3>
+
+<img src="screenshots/15-nexora-product-service-catalogue.png" width="100%">
+
+<p><em>Standardized Nexora product and service catalogue with unique product codes.</em></p>
+
+</td>
+</tr>
+</table>
+
+### Nexora Q4 Sales Revenue Target
+
+| Setting | Configuration |
+|---|---|
+| Goal Type | Deals Won |
+| Pipeline | Nexora B2B Sales Pipeline |
+| Frequency | Quarterly |
+| Period | Q4 2026 |
+| Target | NGN 75,000 |
+
+> **Portfolio Note:** The displayed goal currency reflects the regional/account currency configuration of the Pipedrive environment used for this implementation.
 
 ### Product & Service Catalogue
-
-A structured service catalogue was created for:
 
 | Product / Service | Product Code |
 |---|---|
@@ -121,56 +344,198 @@ A structured service catalogue was created for:
 | Analytics Expansion Package | NAS-AEP-004 |
 | Operations Automation Suite | NAS-OAS-005 |
 
----
-
-## Key Features Demonstrated
-
-- Pipedrive CRM configuration
-- B2B pipeline architecture
-- Deal and opportunity management
-- Custom qualification fields
-- Sales activity management
-- Workflow automation
-- Follow-up process design
-- Pipeline reporting
-- Sales dashboards
-- KPI and goal tracking
-- Product catalogue management
-- CRM process optimization
+Together, these features connect day-to-day sales execution with measurable performance objectives and standardized commercial offerings.
 
 ---
 
-## Implementation Evidence
+# 🔄 End-to-End Solution
 
-The `/screenshots` directory contains **15 screenshots** documenting the implementation from CRM configuration through automation, reporting, dashboard creation, goal management, and product setup.
+The completed implementation connects the customer journey from prospect identification through sales-performance management.
 
-Detailed implementation notes are available in the `/documentation` directory.
+```text
+TARGET ACCOUNT
+      ↓
+DECISION MAKER
+      ↓
+NEW OPPORTUNITY
+      ↓
+QUALIFICATION
+      ↓
+DISCOVERY
+      ↓
+PRODUCT DEMO
+      ↓
+PROPOSAL
+      ↓
+NEGOTIATION
+      ↓
+CONTRACT REVIEW
+      ↓
+WON
+      ↓
+REVENUE & PERFORMANCE REPORTING
+```
+
+### Three supporting layers operate throughout the lifecycle:
+
+| Layer | Purpose |
+|---|---|
+| **Activities** | Keep opportunities moving |
+| **Automations** | Create consistent next actions |
+| **Insights & Goals** | Provide management visibility |
 
 ---
 
-## Business Outcome
+# 💼 Business Outcome
 
-The completed solution provides Nexora with a centralized B2B sales-management environment where opportunities can be qualified, progressed, followed up, analyzed, and managed through a consistent sales process.
+The completed environment demonstrates how Pipedrive can be developed from an empty CRM into a structured B2B sales-management system.
 
-Automation reduces dependence on manual reminders, while reporting and goal tracking provide greater visibility into pipeline health and sales performance.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>CRM Foundation</h3>
+
+✓ Custom B2B sales pipeline<br>
+✓ Prospect organizations<br>
+✓ Decision-maker contacts<br>
+✓ Structured opportunity records
+
+</td>
+<td width="50%" valign="top">
+
+<h3>Sales Execution</h3>
+
+✓ Qualification framework<br>
+✓ Centralized activity management<br>
+✓ Six lifecycle automations<br>
+✓ Defined next-action process
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+<h3>Management Visibility</h3>
+
+✓ Expected-close forecasting<br>
+✓ Pipeline movement analysis<br>
+✓ Sales performance dashboard<br>
+✓ Pipeline health reporting<br>
+✓ Quarterly revenue target
+
+</td>
+<td width="50%" valign="top">
+
+<h3>Commercial Structure</h3>
+
+✓ Standardized product catalogue<br>
+✓ Consistent service codes<br>
+✓ Defined revenue objective<br>
+✓ Structured sales lifecycle
+
+</td>
+</tr>
+</table>
+
+### The result:
+
+> A connected system for **capturing, qualifying, progressing, following up, analyzing and managing B2B sales opportunities.**
 
 ---
 
-## Tools Used
+# 🧩 Implementation at a Glance
 
-- Pipedrive CRM
-- Pipedrive Automations
-- Pipedrive Insights
-- Pipedrive Goals
-- Pipedrive Products
-- GitHub
+| Area | Implementation |
+|---|---|
+| **Platform** | Pipedrive CRM |
+| **Business Model** | B2B Technology Sales |
+| **Pipeline** | Nexora B2B Sales Pipeline |
+| **Pipeline Stages** | 8 |
+| **Sample Opportunities** | 10 |
+| **Qualification** | Custom deal fields |
+| **Activity Management** | Calls, meetings, tasks & follow-ups |
+| **Workflow Automation** | 6 lifecycle automations |
+| **Analytics** | Pipeline & sales reports |
+| **Dashboard** | Nexora Sales Performance Dashboard |
+| **Goal Management** | Quarterly revenue target |
+| **Product Management** | 5 standardized services |
 
 ---
 
-## About This Project
+# 📚 Project Documentation
 
-This is a portfolio implementation created to demonstrate practical CRM configuration, workflow automation, sales operations, and business-process design skills.
+Detailed implementation documentation is available in the [`documentation`](documentation/) directory.
 
-**Created by Chika Blessing**
+| Document | Coverage |
+|---|---|
+| [01 – Project Overview](documentation/01-project-overview.md) | Scope, scenario and objectives |
+| [02 – Business Requirements](documentation/02-business-requirements.md) | Requirements and success criteria |
+| [03 – Solution Design](documentation/03-solution-design.md) | CRM architecture |
+| [04 – Pipeline & Deal Management](documentation/04-pipeline-and-deal-management.md) | Sales lifecycle design |
+| [05 – Activity Management](documentation/05-activity-management.md) | Sales activity framework |
+| [06 – Workflow Automations](documentation/06-workflow-automations.md) | Automation strategy |
+| [07 – Reporting & Dashboard](documentation/07-reporting-and-dashboard.md) | Analytics and management reporting |
+| [08 – Sales Goals](documentation/08-sales-goals.md) | Revenue target configuration |
+| [09 – Product Catalogue](documentation/09-product-catalogue.md) | Product and service structure |
 
-Executive Business Partner | Success Partner | Healthcare Operations Specialist | CRM & Workflow Automation | Project Manager | Executive Virtual Assistant | Customer Success
+---
+
+# 🛠️ Skills Demonstrated
+
+`Pipedrive CRM` · `CRM Implementation` · `Sales Operations` · `B2B Sales Process` · `Pipeline Design` · `Deal Management` · `CRM Data Management` · `Sales Qualification` · `Activity Management` · `Workflow Automation` · `Process Design` · `Sales Reporting` · `Dashboard Design` · `Pipeline Analytics` · `Revenue Forecasting` · `Goal Tracking` · `Product Management`
+
+---
+
+# 📂 Repository Structure
+
+```text
+pipedrive-b2b-sales-crm-implementation/
+│
+├── README.md
+│
+├── documentation/
+│   ├── 01-project-overview.md
+│   ├── 02-business-requirements.md
+│   ├── 03-solution-design.md
+│   ├── 04-pipeline-and-deal-management.md
+│   ├── 05-activity-management.md
+│   ├── 06-workflow-automations.md
+│   ├── 07-reporting-and-dashboard.md
+│   ├── 08-sales-goals.md
+│   └── 09-product-catalogue.md
+│
+└── screenshots/
+    ├── 01-nexora-b2b-sales-pipeline.png
+    ├── 02-prospect-organizations.png
+    ├── 03-decision-maker-contacts.png
+    ├── 04-populated-sales-pipeline.png
+    ├── 05-custom-deal-fields.png
+    ├── 06-deal-sales-qualification.png
+    ├── 07-team-sales-activity-management.png
+    ├── 08-new-opportunity-qualification-automation.png
+    ├── 09-qualified-lead-discovery-automation.png
+    ├── 10-active-sales-automations-overview.png
+    ├── 11_Deal_Value_and_Expected_Close_Forecast.png
+    ├── 12_Deal_Progress_and_Pipeline_Movement.png
+    ├── 13-nexora-sales-performance-dashboard.png
+    ├── 14-nexora-q4-sales-revenue-goal.png
+    └── 15-nexora-product-service-catalogue.png
+```
+
+---
+
+# Project Disclaimer
+
+**Nexora is a fictional company.** The organizations, contacts, opportunities, commercial information and other sample data shown in this project were created for portfolio and demonstration purposes.
+
+This project demonstrates practical CRM implementation and sales-operations skills and does not represent a live client deployment.
+
+---
+
+## 👤 Created by Chika Blessing
+
+**Executive Business Partner | Success Partner | Healthcare Operations Specialist | CRM & Workflow Automation | Project Manager | Executive Virtual Assistant | Customer Success**
+
+"Same warmth, wherever you find me."
